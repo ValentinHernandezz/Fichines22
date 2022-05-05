@@ -6,7 +6,7 @@ USE fichines;
 
 create table Fichin (
 idFichin TINYINT NOT NULL,
-Nombre VARCHAR(25) NOT NULL,
+Nombre VARCHAR(45) NOT NULL,
 Lanzamiento Year NOT NULL, 
 Precio DECIMAL(7,2) NOT NULL,
 PRIMARY KEY (idFichin)
@@ -15,10 +15,10 @@ PRIMARY KEY (idFichin)
 
 create table Cliente (
 DNI INT NOT NULL, 
-Nombre CHAR NOT NULL,
-Apellido CHAR NOT NULL,
+Nombre VARCHAR(45) NOT NULL,
+Apellido VARCHAR(45) NOT NULL,
 Mail VARCHAR(64) NOT NULL,
-TarjetaJuego SMALLINT NOT NULL,
+TarjetaJuego SMALLINT UNSIGNED NOT NULL,
 PRIMARY KEY (DNI)
 );
 
