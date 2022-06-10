@@ -70,4 +70,8 @@ BEGIN
 insert into (DNI, Nombre, Apellido, Mail, TarjetaJuego, Saldo, Pass) 
       value (unDNI, unNombre, un Apellido, unMail, unTarjetoJuego, unSaldo, sha2(unPass 256));
       end $$
-      
+drop procedure if exists clientePorDniPass
+create procedure clientePorDniPass (unDNI INT,unPass CHAR(64))
+BEGIN
+select *
+from Cliente
