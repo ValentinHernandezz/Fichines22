@@ -48,7 +48,7 @@ REFERENCES Recarga (idRecarga)
 );
 delimiter $$
 drop procedure if exists altaFichin $$
-procedure altaFichin (unidFichin TINYINT, unNombre VARCHAR(45), unLanzamiento YEAR, unPrecio, unidRecarga TINYINT)
+procedure altaFichin (unidFichin TINYINT, unNombre VARCHAR(45), unLanzamiento YEAR, unPrecio DECIMAL(7,2), unidRecarga TINYINT)
 BEGIN
 insert into Fichin (idFichin, Nombre, Lanzamiento, Precio, idRecarga)
              value (unidFichin, unNombre, unLanzamiento, unPrecio, unidRecarga);
@@ -70,4 +70,4 @@ BEGIN
 insert into (DNI, Nombre, Apellido, Mail, TarjetaJuego, Saldo, Pass) 
       value (unDNI, unNombre, un Apellido, unMail, unTarjetoJuego, unSaldo, sha2(unPass 256));
       end $$
-
+      
